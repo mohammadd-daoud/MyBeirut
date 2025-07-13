@@ -1,0 +1,247 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f8fb;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #ffffff;
+    color: #1a73e8;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #e6e9ef;
+}
+
+.sidebar .logo {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a73e8;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e9ef;
+    padding-bottom: 10px;
+}
+
+.sidebar nav ul li:last-child {
+    border-bottom: none;
+}
+
+/* Sidebar links */
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #e6e9ef; /* Thin grey line below each link */
+}
+
+.sidebar nav ul li a:hover {
+    background: #e6f0ff;
+    color: #0d47a1;
+    padding-left: 20px;
+}
+
+
+.sidebar nav ul li a.active {
+    background: #1a73e8;
+    color: #fff;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px;
+    padding: 20px 30px;
+    width: calc(100% - 250px);
+    background: #f4f8fb;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e9ef;
+}
+
+.dashboard-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+.logout-btn {
+    padding: 10px 25px;
+    background: #ff5252;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+.logout-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border: 1px solid #e6e9ef;
+}
+
+.dashboard-section h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a73e8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+a.btn, button.btn {
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Approve Button */
+a.btn.green, button.btn.green {
+    background: #28a745;
+}
+
+a.btn.green:hover, button.btn.green:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Disapprove Button */
+a.btn.red, button.btn.red {
+    background: #ff5252;
+}
+
+a.btn.red:hover, button.btn.red:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+/* View Only Button */
+span.view-only {
+    color: #999;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 8px;
+    background: #f0f0f0;
+    display: inline-block;
+    cursor: not-allowed;
+    text-align: center;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    padding: 15px 20px;
+    text-align: left;
+    border: 1px solid #e6e9ef;
+    font-size: 15px;
+}
+
+th {
+    background: #1a73e8;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tr:hover {
+    background: #e6f0ff;
+}
+
+/* Action Buttons */
+td .action-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}

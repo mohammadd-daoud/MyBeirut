@@ -1,0 +1,281 @@
+:root {
+    --primary-bg: #ffffff; /* White background for navbar */
+    --primary-text: #2c3e50; /* Deep blue for text */
+    --hover-color: #3498db; /* Light blue for hover */
+    --border-color: #e0e0e0; /* Light gray for border */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa; /* Light background for contrast */
+    color: var(--primary-text);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-bg);
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--hover-color);
+    color: #ffffff;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon i {
+    font-size: 24px;
+    color: var(--primary-text);
+    transition: color 0.3s ease;
+}
+
+.profile-icon i:hover {
+    color: var(--hover-color);
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 100px auto; /* Increased top margin for more spacing */
+    background: var(--primary-bg);
+    border-radius: 8px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    text-align: center; /* Center all content */
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-text);
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-text);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tab-button.active {
+    color: var(--hover-color);
+    border-bottom: 3px solid var(--hover-color);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.profile-info img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 2px solid var(--hover-color);
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.profile-info h3 {
+    font-size: 20px;
+    color: var(--primary-text);
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 16px;
+    color: var(--primary-text);
+}
+
+button {
+    display: inline-block;
+    background: var(--hover-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #217dbb; /* Slightly darker hover effect */
+    transform: translateY(-2px); /* Adds a slight lift on hover */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Emphasize the shadow */
+}
+
+/* Form Submissions Table Styling */
+.form-submissions table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--primary-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.form-submissions th,
+.form-submissions td {
+    padding: 15px 20px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+}
+
+.form-submissions th {
+    background: var(--hover-color);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form-submissions td {
+    color: var(--primary-text);
+}
+
+.form-submissions tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+.form-submissions tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.form-submissions tr:hover {
+    background: #e6f0ff;
+    cursor: pointer;
+}
+/* Form Submissions Table Styling */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.styled-table thead tr {
+    background-color: var(--hover-color);
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+}
+
+.styled-table tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.styled-table tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tr:last-of-type {
+    border-bottom: 2px solid var(--hover-color);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .form-submissions th,
+    .form-submissions td {
+        padding: 10px 15px;
+    }
+}
+.status-approved {
+    color: green;
+    font-weight: bold;
+}
+
+.status-disapproved {
+    color: red;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: orange;
+    font-weight: bold;
+}

@@ -1,0 +1,166 @@
+:root {
+    --primary-bg: #ffffff;
+    --primary-text: #2c3e50;
+    --hover-color: #3498db;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --card-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: var(--primary-text);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-bg);
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--hover-color);
+    color: #ffffff;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon i {
+    font-size: 24px;
+    color: var(--primary-text);
+    transition: color 0.3s ease;
+}
+
+.profile-icon i:hover {
+    color: var(--hover-color);
+}
+
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-box {
+    background: var(--primary-bg);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+h1, h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+ul li {
+    font-size: 14px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+footer {
+    background: var(--primary-bg);
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    color: var(--primary-text);
+}
+
+footer p {
+    margin: 0;
+}
+
+.sub-email {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.email-sub-place {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.sub_button {
+    background: var(--hover-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sub_button:hover {
+    background: #217dbb;
+}
+
+.team-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
